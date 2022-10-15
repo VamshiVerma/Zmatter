@@ -17,6 +17,8 @@ a = "7a3f2bf87c744232930c121780d68cdb"
 # 2. Retrieving audio file from YouTube video
 def get_tok(inputURL):
     dirx = os.getcwd()
+    st.info(dirx+'/chromedriver')
+
     driver = webdriver.Chrome(executable_path=dirx+'/chromedriver')
 
     #visit tiktok to mp3 converter website
