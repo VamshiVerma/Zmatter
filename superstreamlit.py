@@ -1,0 +1,30 @@
+import streamlit as st
+from super import get_tok, transcribe_tok
+
+st.markdown('# 📝 **Tiktok Insights**')
+
+st.warning('Awaiting URL input in the sidebar.')
+
+
+# Sidebar
+st.sidebar.header('Input parameter')
+
+with st.sidebar.form(key='my_form'):
+	URL = st.text_input('Enter URL of Tiktok video:')
+	submit_button = st.form_submit_button(label='Go')
+
+# Run custom functions if URL is entered 
+if submit_button:
+    durl=get_tok(URL)
+    transcribe_tok(durl)
+
+    with open("transcription.zip", "rb") as zip_download:
+        btn = st.download_button(
+            label="Download ZIP",
+            data=zip_download,
+            file_name="transcription.zip",
+            mime="application/zip"
+        )
+
+with st.sidebar.expander('Example URL'):
+	st.code('https://www.tiktok.com/@neildegrassetyson/video/7138886180099198251')
