@@ -9,6 +9,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 import time
+from selenium.webdriver.chrome.options import Options
+
 
 
 bar = st.progress(0)
@@ -19,9 +21,13 @@ a = "7a3f2bf87c744232930c121780d68cdb"
 # 2. Retrieving audio file from YouTube video
 def get_tok(inputURL):
     dirx = os.getcwd()
-    
-    s=Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=s)
+
+    chrome_options = Options()
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    driver = webdriver.Chrome('/home/<user>/chromedriver',chrome_options=chrome_options)
+
     st.info(dirx+'/chromedriver')
     #visit tiktok to mp3 converter website
     driver.get("https://ssstik.io/download-tiktok-mp3")
