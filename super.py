@@ -46,9 +46,9 @@ def get_tok(inputURL):
     driver.find_element(By.XPATH,'//*[@id="submit"]').click()
 
     #Await the download page to load
-    time.sleep(10)
+    #time.sleep(10)
     #scroll down
-    driver.execute_script("window.scrollTo(0, 200)") 
+    #driver.execute_script("window.scrollTo(0, 200)") 
     st.info(driver.page_source)
 
 
