@@ -27,9 +27,14 @@ def get_tok(inputURL):
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--disable-dev-shm-usage')
     #driver = webdriver.Chrome('/home/<user>/chromedriver',chrome_options=chrome_options)
+    
+    
     s=Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=s,chrome_options=chrome_options)
 
+    #driver = webdriver.Chrome(executable_path='/Users/vamshi/Documents/assemblyai-content-moderation-app/HackHarvard2022/chromedriver')
+
+    
     st.info(dirx+'/chromedriver')
     #visit tiktok to mp3 converter website
     driver.get("https://ssstik.io/download-tiktok-mp3")
