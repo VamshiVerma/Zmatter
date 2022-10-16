@@ -124,7 +124,7 @@ def transcribe_tok(durl):
     placeholder.empty()
 
     # 7. Print transcribed text
-    st.title('Results')
+    st.header('Output')
     
 
 
@@ -149,14 +149,14 @@ def transcribe_tok(durl):
 
 
     # 10. Write content_safety_labels
-    st.header('Show summary')
+    st.title('Show summary')
     o=(transcript_output_response.json()['chapters'])
     su= "**Summary**: {}".format(o[0]['summary'])
     he= "**Headline**: {}".format(o[0]['headline'])
     gi= "**Gist**: {}".format(o[0]['gist'])
-    st.caption(su)
-    st.caption(he)
-    st.caption(gi)
+    st.markdown(su)
+    st.markdown(he)
+    st.markdown(gi)
     tok_txt.write(su)
     tok_txt.write("\n")
     tok_txt.write(he)
@@ -175,7 +175,7 @@ def transcribe_tok(durl):
     with st.expander('Show entities'):
         for r in (transcript_output_response.json()['entities']):
             en=("{} : {}".format(r['entity_type'].capitalize(),r['text'].capitalize()))
-            st.write(en)
+            st.success(en)
             tok_txt.write(en)
             tok_txt.write("\n")
 
@@ -191,7 +191,7 @@ def transcribe_tok(durl):
         count=0
         for k, v in f.items():
             cat=("{} with {} matching".format(k,"%.0f%%" % (100 * v)))
-            st.write(cat)
+            st.success(cat)
             tok_txt.write(cat)
             if(count==2):
                 break
@@ -208,7 +208,7 @@ def transcribe_tok(durl):
         x=(transcript_output_response.json()['content_safety_labels']['summary'])
         for k, v in x.items():
             saf=("This Tiktok has {} of {}".format(k,"%.0f%%" % (100 * v)))
-            st.write(saf)
+            st.success(saf)
             tok_txt.write(saf)
             tok_txt.write("\n")
 
