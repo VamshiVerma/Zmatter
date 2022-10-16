@@ -145,20 +145,20 @@ def transcribe_tok(durl):
 
 
     # 10. Write content_safety_labels
-    with st.title('Show summary'):
-        o=(transcript_output_response.json()['chapters'])
-        su= "**Summary**: {}".format(o[0]['summary'])
-        he= "**Headline**: {}".format(o[0]['headline'])
-        gi= "**Gist**: {}".format(o[0]['gist'])
-        st.markdown(su)
-        st.markdown(he)
-        st.markdown(gi)
-        tok_txt.write(su)
-        tok_txt.write("\n")
-        tok_txt.write(he)
-        tok_txt.write("\n")
-        tok_txt.write(gi)
-        tok_txt.write("\n")
+    st.title('Show summary'):
+    o=(transcript_output_response.json()['chapters'])
+    su= "**Summary**: {}".format(o[0]['summary'])
+    he= "**Headline**: {}".format(o[0]['headline'])
+    gi= "**Gist**: {}".format(o[0]['gist'])
+    st.markdown(su)
+    st.markdown(he)
+    st.markdown(gi)
+    tok_txt.write(su)
+    tok_txt.write("\n")
+    tok_txt.write(he)
+    tok_txt.write("\n")
+    tok_txt.write(gi)
+    tok_txt.write("\n")
 
     tok_txt.write("----------------------------------------------------------------\n")
     tok_txt.write("----------------------------------------------------------------\n")
