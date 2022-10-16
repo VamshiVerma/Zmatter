@@ -87,13 +87,13 @@ def transcribe_tok(durl):
 
 
     placeholder.info('2. Transcribing the Audio')
-    sleep(1)
+    sleep(2)
     bar.progress(40)
 
     # 5. Extract transcript ID
     transcription_id = response.json()['id']
     placeholder.info('3. Calling AssemblyAI for transcript ID')
-    sleep(1)
+    sleep(2)
     bar.progress(50)
 
     # 6. Retrieve transcription results
@@ -109,7 +109,7 @@ def transcribe_tok(durl):
     print(response.json())
 
     placeholder.info('4. Retrieving transcription results')
-    sleep(1)
+    sleep(2)
     bar.progress(60)
 
     # Check if transcription is complete
@@ -124,7 +124,7 @@ def transcribe_tok(durl):
     placeholder.empty()
 
     # 7. Print transcribed text
-    st.header('Output')
+    st.title('Insights')
     
 
 
@@ -149,7 +149,6 @@ def transcribe_tok(durl):
 
 
     # 10. Write content_safety_labels
-    st.title('Show summary')
     o=(transcript_output_response.json()['chapters'])
     su= "**Summary**: {}".format(o[0]['summary'])
     he= "**Headline**: {}".format(o[0]['headline'])
