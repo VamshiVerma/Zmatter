@@ -145,7 +145,7 @@ def transcribe_tok(durl):
 
 
     # 10. Write content_safety_labels
-    st.title('Show summary'):
+    st.title('Show summary')
     o=(transcript_output_response.json()['chapters'])
     su= "**Summary**: {}".format(o[0]['summary'])
     he= "**Headline**: {}".format(o[0]['headline'])
