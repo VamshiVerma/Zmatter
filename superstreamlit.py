@@ -1,7 +1,7 @@
 import streamlit as st
 from super import get_tok, transcribe_tok
 
-st.markdown('# 👩‍🎓 **Edify Tiktok**')
+st.markdown('# 👩‍🎓 **ZMatter**')
 
 st.warning('<<=== Awaiting URL input in the sidebar.')
 
