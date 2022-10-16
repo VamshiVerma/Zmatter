@@ -28,3 +28,6 @@ if submit_button:
 
 with st.sidebar.expander('Example URL'):
 	st.code('https://www.tiktok.com/@neildegrassetyson/video/7138886180099198251')
+
+with st.sidebar.expander('Example URL'):
+	st.code('https://www.tiktok.com/@therock/video/7151364108066000174')
