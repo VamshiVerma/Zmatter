@@ -8,7 +8,7 @@ bar = st.progress(0)
 
 # 1. API
 a = "7a3f2bf87c744232930c121780d68cdb"
-
+placeholder = st.empty()
 # 2. Retrieving audio file from YouTube video
 def get_tok(inputURL):
     
@@ -41,9 +41,23 @@ def get_tok(inputURL):
         "X-RapidAPI-Host": "tiktok-video-downloader.p.rapidapi.com"
     }
 
+
+    
+
+
+
+
+    # Clear all those elements:
+
+
+
+
+
+
+
     response = requests.request("GET", url, headers=headers, params=querystring)
     print(response.json())
-    st.info('1. Audio file has been retrieved from Tiktok video')
+    placeholder.info('1. Audio file has been retrieved from Tiktok video')
     bar.progress(10)
     k= response.json()['data']['musicUrl']
     return k
@@ -71,12 +85,12 @@ def transcribe_tok(durl):
     bar.progress(25)
 
 
-    st.info('2. Transcribing the Audio')
+    placeholder.info('2. Transcribing the Audio')
     bar.progress(40)
 
     # 5. Extract transcript ID
     transcription_id = response.json()['id']
-    st.info('3. Calling AssemblyAI for transcript ID')
+    placeholder.info('3. Calling AssemblyAI for transcript ID')
     bar.progress(50)
 
     # 6. Retrieve transcription results
@@ -91,24 +105,24 @@ def transcribe_tok(durl):
 
     print(response.json())
 
-    st.info('4. Retrieving transcription results')
+    placeholder.info('4. Retrieving transcription results')
     bar.progress(60)
 
     # Check if transcription is complete
 
-    st.warning('Transcription is processing ...')
+    placeholder.warning('Transcription is processing ...')
     while transcript_output_response.json()['status'] != 'completed':
         sleep(2)
         bar.progress(80)
         transcript_output_response = requests.get(endpoint, headers=headers)
     
     bar.progress(100)
+    placeholder.empty()
 
     # 7. Print transcribed text
     st.header('Output')
     
-    with st.expander('Show Text'):
-        st.success(transcript_output_response.json()["text"])
+
 
     # 8. Save transcribed text to file
 
@@ -131,14 +145,14 @@ def transcribe_tok(durl):
 
 
     # 10. Write content_safety_labels
-    with st.expander('Show summary'):
+    with st.title('Show summary'):
         o=(transcript_output_response.json()['chapters'])
-        su= "Summary: {}".format(o[0]['summary'])
-        he= "Headline: {}".format(o[0]['headline'])
-        gi= "Gist: {}".format(o[0]['gist'])
-        st.write(su)
-        st.write(he)
-        st.write(gi)
+        su= "**Summary**: {}".format(o[0]['summary'])
+        he= "**Headline**: {}".format(o[0]['headline'])
+        gi= "**Gist**: {}".format(o[0]['gist'])
+        st.markdown(su)
+        st.markdown(he)
+        st.markdown(gi)
         tok_txt.write(su)
         tok_txt.write("\n")
         tok_txt.write(he)
@@ -149,6 +163,10 @@ def transcribe_tok(durl):
     tok_txt.write("----------------------------------------------------------------\n")
     tok_txt.write("----------------------------------------------------------------\n")
     tok_txt.write("Entities:\n")
+
+    with st.expander('Show Text'):
+        st.success(transcript_output_response.json()["text"])
+
     # 10. Write content_safety_labels
     with st.expander('Show entities'):
         for r in (transcript_output_response.json()['entities']):
@@ -189,6 +207,10 @@ def transcribe_tok(durl):
             st.write(saf)
             tok_txt.write(saf)
             tok_txt.write("\n")
+
+
+
+
 
 
 
