@@ -43,7 +43,7 @@ def get_tok(inputURL):
 
     response = requests.request("GET", url, headers=headers, params=querystring)
     print(response.json())
-    st.info('2. Audio file has been retrieved from Tiktok video')
+    st.info('1. Audio file has been retrieved from Tiktok video')
     bar.progress(10)
     k= response.json()['data']['musicUrl']
     return k
@@ -71,12 +71,12 @@ def transcribe_tok(durl):
     bar.progress(25)
 
 
-    st.info('4. Transcribing the Audio')
+    st.info('2. Transcribing the Audio')
     bar.progress(40)
 
     # 5. Extract transcript ID
     transcription_id = response.json()['id']
-    st.info('5. Calling AssemblyAI for transcript ID')
+    st.info('3. Calling AssemblyAI for transcript ID')
     bar.progress(50)
 
     # 6. Retrieve transcription results
@@ -91,7 +91,7 @@ def transcribe_tok(durl):
 
     print(response.json())
 
-    st.info('6. Retrieving transcription results')
+    st.info('4. Retrieving transcription results')
     bar.progress(60)
 
     # Check if transcription is complete
@@ -189,6 +189,7 @@ def transcribe_tok(durl):
             st.write(saf)
             tok_txt.write(saf)
             tok_txt.write("\n")
+
 
 
     tok_txt.close()
