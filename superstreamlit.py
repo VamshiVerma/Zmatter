@@ -5,7 +5,7 @@ st.markdown('# 👩‍🎓 **ZMatter**')
 war = st.empty()
 
 war.warning('⬆️ Awaiting URL input in the sidebar.')
-war.image("https://i.postimg.cc/7ZQjpjq4/Hackharvard.gif")
+war.image("https://i.postimg.cc/pdxbQ4YJ/Hack.gif")
 # Sidebar
 st.sidebar.header('Input parameter')
 
