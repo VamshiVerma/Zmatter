@@ -14,9 +14,9 @@ with st.sidebar.form(key='my_form'):
 	URL = st.text_input('Enter URL of Tiktok video:')
 	submit_button = st.form_submit_button(label='Go')
 
-war.empty()
 # Run custom functions if URL is entered 
 if submit_button:
+    war.empty()
     durl=get_tok(URL)
     transcribe_tok(durl)
 
