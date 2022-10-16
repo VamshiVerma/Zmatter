@@ -47,7 +47,7 @@ def get_tok(inputURL):
 
 
     #Trying to extract the link of "Download MP3 Button"
-    element = driver.find_element(By.XPATH,'//*[@id="mainpicture"]/div/div/a[4]')
+    element = driver.find_element(By.XPATH,'/html/body/main/section[1]/div/div/div[3]/div/div/div/a[4]')
     k=element.get_attribute("href")
     st.info('2. Audio file has been retrieved from YouTube video')
     bar.progress(10)
