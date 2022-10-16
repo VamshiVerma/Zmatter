@@ -29,6 +29,9 @@ def get_tok(inputURL):
         rx = marker1 + '(.+?)' + marker2
         inputURL = re.search(rx, response.text).group(1)
         print((inputURL))
+    elif (len(inputURL)>=73):
+        colors = inputURL.split('?')
+        inputURL=colors[0]
         
 
 
