@@ -2,8 +2,9 @@ import streamlit as st
 from super import get_tok, transcribe_tok
 
 st.markdown('# 👩‍🎓 **ZMatter**')
+war = st.empty()
 
-st.warning('<<=== Awaiting URL input in the sidebar.')
+war.warning('⬆️ Awaiting URL input in the sidebar.')
 
 
 # Sidebar
@@ -13,6 +14,7 @@ with st.sidebar.form(key='my_form'):
 	URL = st.text_input('Enter URL of Tiktok video:')
 	submit_button = st.form_submit_button(label='Go')
 
+war.empty()
 # Run custom functions if URL is entered 
 if submit_button:
     durl=get_tok(URL)
