@@ -1,14 +1,14 @@
 import streamlit as st
 from super import get_tok, transcribe_tok
 
-st.markdown('# 👩‍🎓 ZMatter: *Fetch Tiktok Insights*💡')
+st.markdown('👩‍🎓 ZMatter: *Fetch Tiktok Insights*💡')
 sam=st.empty()
 sam.success('⬆️ Awaiting URL input in the sidebar.')
-
+sam.text("Usage Example")
 war = st.empty()
 
 war.image("https://i.postimg.cc/PJ108MpR/hack.gif")
-war.text("Usage Example")
+
 # Sidebar
 st.sidebar.header('Input parameter')
 
