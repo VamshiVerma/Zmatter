@@ -4,7 +4,6 @@ from super import get_tok, transcribe_tok
 st.markdown('#👩‍🎓 ZMatter: *Fetch Tiktok Insights*💡')
 sam=st.empty()
 sam.success('⬆️ Awaiting URL input in the sidebar.')
-sam.text("Usage Example")
 war = st.empty()
 
 war.image("https://i.postimg.cc/PJ108MpR/hack.gif")
