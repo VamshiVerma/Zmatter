@@ -1,9 +1,10 @@
 import streamlit as st
 from super import get_tok, transcribe_tok
 
-st.title('👩‍🎓 **ZMatter: Fetch Tiktok Insights**💡')
+st.header('👩‍🎓 **ZMatter: Fetch Tiktok Insights**💡')
 sam=st.empty()
 sam.success('⬆️ Awaiting URL input in the sidebar.')
+sam.caption('Usage Example')
 war = st.empty()
 
 war.image("https://i.postimg.cc/PJ108MpR/hack.gif")
