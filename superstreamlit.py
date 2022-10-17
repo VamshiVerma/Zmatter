@@ -1,7 +1,7 @@
 import streamlit as st
 from super import get_tok, transcribe_tok
 
-st.header('👩‍🎓 **ZMatter: Fetch Tiktok Insights**💡')
+st.header('**ZMatter: Fetch Tiktok Insights**💡')
 sam=st.empty()
 
 sir = st.empty()
