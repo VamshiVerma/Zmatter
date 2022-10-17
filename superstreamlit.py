@@ -1,7 +1,7 @@
 import streamlit as st
 from super import get_tok, transcribe_tok
 
-st.markdown('# 👩‍🎓 **ZMatter**: <h5>*Fetch Tiktok Insights*</h5> 💡')
+st.markdown('# 👩‍🎓 **ZMatter: *Fetch Tiktok Insights* **💡')
 sam=st.empty()
 sam.success('⬆️ Awaiting URL input in the sidebar.')
 
