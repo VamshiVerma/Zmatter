@@ -4,8 +4,10 @@ from super import get_tok, transcribe_tok
 st.header('👩‍🎓 **ZMatter: Fetch Tiktok Insights**💡')
 sam=st.empty()
 sam.success('⬆️ Awaiting URL input in the sidebar.')
-sam.caption('Usage Example')
 war = st.empty()
+sir = st.empty()
+
+sir.caption('Usage Example')
 
 war.image("https://i.postimg.cc/PJ108MpR/hack.gif")
 
@@ -20,6 +22,7 @@ with st.sidebar.form(key='my_form'):
 if submit_button:
     war.empty()
     sam.empty()
+    sir.empty()
     durl=get_tok(URL)
     transcribe_tok(durl)
 
