@@ -3,11 +3,14 @@ from super import get_tok, transcribe_tok
 
 st.header('👩‍🎓 **ZMatter: Fetch Tiktok Insights**💡')
 sam=st.empty()
-sam.success('⬆️ Awaiting URL input in the sidebar.')
-war = st.empty()
+
 sir = st.empty()
 
-sir.caption('Usage Example')
+sir.markdown('**Usage Example**')
+
+sam.success('⬆️ Awaiting URL input in the sidebar.')
+war = st.empty()
+
 
 war.image("https://i.postimg.cc/PJ108MpR/hack.gif")
 
