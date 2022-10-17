@@ -4,7 +4,7 @@ from super import get_tok, transcribe_tok
 st.markdown('# 👩‍🎓 **ZMatter**')
 war = st.empty()
 
-war.warning('⬆️ Awaiting URL input in the sidebar.')
+war.success('⬆️ Awaiting URL input in the sidebar.')
 war.image("https://i.postimg.cc/PJ108MpR/hack.gif")
 # Sidebar
 st.sidebar.header('Input parameter')
