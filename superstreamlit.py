@@ -1,10 +1,12 @@
 import streamlit as st
 from super import get_tok, transcribe_tok
 
-st.markdown('# 👩‍🎓 **ZMatter**')
+st.markdown('# 👩‍🎓 **ZMatter: Fetch Tiktok Insights 💡**')
+sam=st.empty()
+war.success('⬆️ Awaiting URL input in the sidebar.')
+
 war = st.empty()
 
-war.success('⬆️ Awaiting URL input in the sidebar.')
 war.image("https://i.postimg.cc/PJ108MpR/hack.gif")
 # Sidebar
 st.sidebar.header('Input parameter')
@@ -16,6 +18,7 @@ with st.sidebar.form(key='my_form'):
 # Run custom functions if URL is entered 
 if submit_button:
     war.empty()
+    sam.empty()
     durl=get_tok(URL)
     transcribe_tok(durl)
 
