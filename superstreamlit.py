@@ -3,7 +3,7 @@ from super import get_tok, transcribe_tok
 
 st.markdown('# 👩‍🎓 **ZMatter: Fetch Tiktok Insights 💡**')
 sam=st.empty()
-war.success('⬆️ Awaiting URL input in the sidebar.')
+sam.success('⬆️ Awaiting URL input in the sidebar.')
 
 war = st.empty()
 
