@@ -35,36 +35,26 @@ def get_tok(inputURL):
         
 
 
-    url = "https://tiktok-video-downloader.p.rapidapi.com/api/downloader"
-    print(str(inputURL))
-    querystring = {"url":inputURL}
+    import requests
+
+    url = "https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/index"
+
+    querystring = {"url":"https://vm.tiktok.com/ZMFnohMVX/"}
 
     headers = {
         "X-RapidAPI-Key": "vk4hE6Nr9JmshjuBCJe3s6zaxkpnp1vZQnrjsnVyo82LaCvAw2",
-        "X-RapidAPI-Host": "tiktok-video-downloader.p.rapidapi.com"
+        "X-RapidAPI-Host": "tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com"
     }
 
-
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    json=response.json()
+    music_url = json['music'][0]
     
 
-
-
-
-    # Clear all those elements:
-
-
-
-
-
-
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    print(response.json())
     placeholder.info('1. Audio file has been retrieved from Tiktok video')
-    sleep(3)
+    sleep(1)
     bar.progress(10)
-    k= response.json()['data']['musicUrl']
-    return k
+    return music_url
 
 # 3. Upload YouTube audio file to AssemblyAI
 def transcribe_tok(durl):
