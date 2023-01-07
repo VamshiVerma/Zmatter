@@ -39,7 +39,7 @@ def get_tok(inputURL):
 
     url = "https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/index"
 
-    querystring = {"url":"https://vm.tiktok.com/ZMFnohMVX/"}
+    querystring = {"url":inputURL}
 
     headers = {
         "X-RapidAPI-Key": "vk4hE6Nr9JmshjuBCJe3s6zaxkpnp1vZQnrjsnVyo82LaCvAw2",
