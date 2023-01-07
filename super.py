@@ -58,6 +58,8 @@ def get_tok(inputURL):
 
 # 3. Upload YouTube audio file to AssemblyAI
 def transcribe_tok(durl):
+    st.success(durl)
+    sleep(3)
     current_dir = os.getcwd()
 
 
