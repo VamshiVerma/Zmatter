@@ -1,5 +1,5 @@
 
-# [ZMATTER](https://Zmatter.tech)
+# [ZMATTER](http://Zmatter.tech)
 
 # Inspiration
 The pandemic altered Genz's approach to schooling. Top creators on social media platforms aren't there because of their educational background or certifications. Their expertise and capacity to convincingly demonstrate what they are teaching are what give them authority and influence. It’s like a "pink elephant in the room." Nobody discusses it. Students also get major learning from social platforms. But, what about the time to watch all those videos on social platforms, THO? Seems like a lot of content. Time matters for a continuous learner. Also, we save a lot of videos to watch later, but do we really watch all those videos? Also, in low internet connectivity areas, one could not watch many videos to grasp the content in them. What about teachers who want to provide new content to students, social platforms have a lot of it. "WHAT IF WE HAVE A SOLUTION THAT REDUCES THE “TIME & INTERNET USAGE” TO GRASP FROM ALL VIDEOS OF EDUCATIONAL CONTENT?"
@@ -33,5 +33,5 @@ We are proud of addressing a major problem for students who are curious to gain 
 * Expansion to other media platforms like YouTube and Instagram
 * Providing insights for a user's entire profile with headline and gist
 * Turning into a small-scale startup to help students with education and more.
-* The application is deployed and hosted on [ZMATTER](https://Zmatter.tech) and is mobile-friendly.
+* The application is deployed and hosted on [ZMATTER](http://Zmatter.tech) and is mobile-friendly.
 
