@@ -6,7 +6,7 @@ The pandemic altered Genz's approach to schooling. Top creators on social media 
 
 # What it does
 It'll extract the insights from the TikTok video. Once we input the video URL, it would serve as input to the Assembly AI where we extracted the Transcription, Summary, Entity Detection, Sentiment Analysis, NSFW, and explicit content detection. The results are then displayed through the Streamlight Application.
-
+![](https://i.postimg.cc/cCbSWnLy/Hackharvard.gif)
 # Features
 Input: Accepts both shortened TikTok URLs and web URLs
 Assembly AI: Uses Assembly AI for transcription, summary, entity detection, sentiment analysis, NSFW, and explicit content detection
