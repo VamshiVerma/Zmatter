@@ -12,7 +12,7 @@ sam.success('⬆️ Awaiting URL input in the sidebar.')
 war = st.empty()
 
 
-war.image("https://i.postimg.cc/Wz0LfsqB/Hack.gif")
+war.image("https://i.postimg.cc/cCbSWnLy/Hackharvard.gif")
 
 # Sidebar
 st.sidebar.header('Input parameter')
